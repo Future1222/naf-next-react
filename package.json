@@ -8,18 +8,34 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install",
+    "stylelint": "stylelint **/*.{scss,css}",
+    "stylelint:fix": "stylelint --fix **/*.{scss,css}"
   },
   "dependencies": {
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "eslint": "8.33.0",
+    "dayjs": "^1.11.6",
     "eslint-config-next": "13.1.6",
+    "firebase": "8.4.1",
+    "husky": "^8.0.3",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.debounce": "^4.0.8",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.39.0",
+    "react-i18next": "^12.0.0",
+    "react-modal": "^3.16.1",
+    "react-select": "^5.7.0",
+    "react-table": "^7.8.0",
+    "react-toastify": "^9.1.1",
+    "swr": "^2.0.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
@@ -32,7 +48,16 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
     "babel-loader": "^8.3.0",
-    "eslint-plugin-storybook": "^0.6.10"
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-storybook": "^0.6.10",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.0.0",
+    "stylelint-webpack-plugin": "^3.3.0"
   }
 }

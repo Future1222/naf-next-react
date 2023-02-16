@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": "error"
+  },
+  "settings": {
+    "next": {
+      "rootDir": "packages/naf-next-react/"
+    }
+  }
+}
+
