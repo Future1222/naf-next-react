@@ -36,7 +36,8 @@
     "react-table": "^7.8.0",
     "react-toastify": "^9.1.1",
     "swr": "^2.0.0",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "yup": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -58,6 +59,7 @@
     "stylelint": "^14.14.0",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^6.0.0",
-    "stylelint-webpack-plugin": "^3.3.0"
+    "postcss": "^8.4.18",
+    "stylelint-webpack-plugin": "^4.0.0"
   }
 }

@@ -4,34 +4,14 @@
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-    "at-rule-no-unknown": [
+    "at-rule-no-unknown": null,
+    "selector-pseudo-element-no-unknown": [
       true,
       {
-        "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen"
+        "ignorePseudoElements": [
+          "v-deep"
         ]
       }
-    ],
-    "scss/at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen"
-        ]
-      }
-    ],
-    "declaration-block-trailing-semicolon": null,
-    "no-descending-specificity": null,
-    "color-function-notation": "legacy",
-    "alpha-value-notation": "number",
-    "selector-class-pattern": null
+    ]
   }
 }

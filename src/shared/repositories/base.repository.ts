@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import firebase from 'firebase'
-import { IWrite, IRead, IQueryWhereClause } from '@/shared/models/common.model'
-import { fireDb } from '@/shared/firebase/firebase.config'
+import { IWrite, IRead, IQueryWhereClause } from '@/shared/repositories/base.interface'
+import { firestore } from '@/configs/firebase'
 export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
   public readonly _collection: firebase.firestore.CollectionReference
   constructor(collectionName: string) {
-    this._collection = fireDb.collection(collectionName)
+    console.log('work')
+    this._collection = firestore?.collection(collectionName)
   }
   create(item: T): Promise<boolean> {
     return this._collection

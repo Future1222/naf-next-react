@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
 const nextConfig = {
   reactStrictMode: true,
   webpack(config) {
