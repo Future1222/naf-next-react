@@ -1,6 +1,18 @@
-import { IUser } from '@/modules/models/user.model'
-import { BaseRepository } from '@/shared/database/base.repository'
+import DatastoreKind from '@/shared/constants/datastore-kind.enum'
+import UserRepository from '@/modules/repositories/user/user.repository'
 
-export default class UserServices extends BaseRepository<IUser> {
-  // All of the necessary function is imported
+export class UserServices {
+  private userRepository: UserRepository
+
+  constructor() {
+    this.userRepository = new UserRepository(DatastoreKind.USERS)
+  }
+
+  findById(id: string) {
+    return this.userRepository.findById(id)
+  }
+
+  findAll() {
+    return this.userRepository.findAll()
+  }
 }

@@ -19,14 +19,14 @@
       "@stories/*": ["src/components/stories/*"],
       "@components/*": ["./src/components/*"],
       "@constances/*": ["./src/constances/*"],
-      "@parts/*": ["./src/parts/*"],
+      "@parts/*": ["src/layouts/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@stores/*": ["./src/stores/*"],
       "@pages/*": ["./src/pages/*"],
       "@svg/*": ["./src/svg/*"],
       "@utils/*": ["./src/utils/*"],
       "@/*": ["./src/*"]
-    },
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

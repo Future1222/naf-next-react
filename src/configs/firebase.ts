@@ -17,7 +17,7 @@ const firebaseConfig = {
 export default !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app()
 
 export const auth = firebase.auth()
-export const fireDb = firebase.firestore()
+export const firestore = firebase.firestore()
 export const storage = firebase.storage()
 export const googleProvider = new firebase.auth.GoogleAuthProvider()
 export const firebaseFunctions = firebase.app().functions(process.env.REGION)
