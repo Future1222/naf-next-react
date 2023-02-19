@@ -2,6 +2,7 @@ import { IForm } from '@/modules/repositories/form/form'
 import { createForm } from '@/validations'
 import GroupFromInput from '@components/input/InputField'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 export default function GetInTouchForm() {
@@ -22,9 +23,10 @@ export default function GetInTouchForm() {
     ),
   })
 
-  const handleSubmit = async (values: any) => {
+  const handleSubmit = (values: any) => {
+    debugger
     console.log(values)
-    alert(`thank you ${values.name} for your message`)
+    alert(`thank you ${values.email} ${values.enquiry}for your message`)
   }
 
   return (
@@ -35,6 +37,13 @@ export default function GetInTouchForm() {
           form={form}
           name="email"
           formLabel="email"
+          iconAfter={<i className="fas fa-user"></i>}
+        />
+        <GroupFromInput
+          placeholder="phone"
+          form={form}
+          name="phone"
+          formLabel="phone"
           iconAfter={<i className="fas fa-user"></i>}
         />
         <GroupFromInput
