@@ -37,3 +37,10 @@ next-env.d.ts
 
 # storybook production
 storybook-static
+
+# extension vscode
+yarn.lock
+package.json
+tsconfig.tsbuildinfo
+
+.next/
