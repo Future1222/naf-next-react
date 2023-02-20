@@ -11,15 +11,21 @@
 
 ```
 public
-   |-- favicon.ico
-   |-- next.svg
-   |-- thirteen.svg
-   |-- vercel.svg
+   |-- icons
+   |-- images
 src
    |-- components
+       |-- ui
+   |-- configs
+   |-- contexts
    |-- hooks
-   |-- parts
+   |-- layouts
+   |-- modules
    |-- pages
+   |-- shared
+       |-- constances
+       |-- repositories
+       |-- utils
 .env.local
 ```
 
