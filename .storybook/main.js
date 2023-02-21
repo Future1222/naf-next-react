@@ -21,4 +21,10 @@ module.exports = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
   },
+  webpackFinal: async (config) => {
+    config.resolve.fallback = {
+      fs: false,
+    }
+    return config
+  },
 }
