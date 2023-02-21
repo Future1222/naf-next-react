@@ -9,7 +9,13 @@ const nextConfig = {
   },
   env: {
     PUBLIC_API_KEY: process.env.PUBLIC_API_KEY,
-    API_BASE_URL: process.env.API_BASE_URL,
+    AUTH_DOMAIN: process.env.AUTH_DOMAIN,
+    DB_URL: process.env.DB_URL,
+    PROJECT_ID: process.env.PROJECT_ID,
+    STOREAGE_BUCKET: process.env.STOREAGE_BUCKET,
+    MESSAGING_SENDER_ID: process.env.MESSAGING_SENDER_ID,
+    APP_ID: process.env.APP_ID,
+    REGION: process.env.REGION,
   },
 }
 
