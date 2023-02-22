@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@stories/*": ["src/components/stories/*"],
+      "@stories/*": ["src/components/*"],
       "@components/*": ["./src/components/*"],
       "@constances/*": ["./src/constances/*"],
       "@parts/*": ["src/layouts/*"],
@@ -24,7 +24,7 @@
       "@stores/*": ["./src/stores/*"],
       "@pages/*": ["./src/pages/*"],
       "@svg/*": ["./src/svg/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@utils/*": ["src/shared/utils/*"],
       "@/*": ["./src/*"]
     }
   },

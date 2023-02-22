@@ -1,4 +1,4 @@
-<h1 align="center">NAF</h1>
+<h1 align="center">🚀🚀🚀 NAF 🚀🚀🚀</h1>
 
 ## Before You Begin
 
@@ -11,15 +11,21 @@
 
 ```
 public
-   |-- favicon.ico
-   |-- next.svg
-   |-- thirteen.svg
-   |-- vercel.svg
+   |-- icons
+   |-- images
 src
    |-- components
+       |-- ui
+   |-- configs
+   |-- contexts
    |-- hooks
-   |-- parts
+   |-- layouts
+   |-- modules
    |-- pages
+   |-- shared
+       |-- constances
+       |-- repositories
+       |-- utils
 .env.local
 ```
 
@@ -88,15 +94,6 @@ You can easily run the tests as below:
 
 ```bash
 $ yarn test
-```
-
-Also, you need to notice about visual testing when it's failed. If you actively make a change that cause the testing to failed, let update snapshot with below steps:
-
-```bash
-# 1. Build Storybook for Testing
-$ NODE_ENV=test yarn build-storybook
-# 2. Run script to update snapshot
-$ yarn test-visual:updateSnapshot
 ```
 
 If not, please try finding the problem and resolve it.

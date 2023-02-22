@@ -8,7 +8,7 @@ interface IFirebaseContext {
   firestore: firebase.firestore.Firestore
 }
 
-interface Properties {
+interface IReactNode {
   children: ReactNode
 }
 
@@ -20,7 +20,7 @@ const FirebaseContext: Context<IFirebaseContext> = createContext<IFirebaseContex
 export { FirebaseContext }
 export type { IFirebaseContext }
 
-export const FirebaseProvider: FC<Properties> = ({ children }: Properties) => {
+export const FirebaseProvider: FC<IReactNode> = ({ children }: IReactNode) => {
   return (
     <FirebaseContext.Provider
       value={{

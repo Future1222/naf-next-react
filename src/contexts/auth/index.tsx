@@ -1,18 +1,18 @@
-import React, { createContext, useEffect, useState, ReactNode } from 'react'
+import React, { createContext, useEffect, useState, ReactNode, FC } from 'react'
 import { auth } from '@/configs/firebase'
 import firebase from 'firebase'
 
-interface AuthContextType {
+interface IAuthContext {
   currentUser: firebase.User | null
 }
 
-interface Properties {
+interface IReactNode {
   children: ReactNode
 }
 
-const AuthContext = createContext<AuthContextType>({ currentUser: null })
+const AuthContext = createContext<IAuthContext>({ currentUser: null })
 
-export const AuthProvider = ({ children }: Properties) => {
+export const AuthProvider: FC<IReactNode> = ({ children }: IReactNode) => {
   const [currentUser, setCurrentUser] = useState<firebase.User | null>(null)
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import 'firebase/auth'
 require('firebase/functions')
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: process.env.PUBLIC_API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
   databaseURL: process.env.DB_URL,
   projectId: process.env.PROJECT_ID,
