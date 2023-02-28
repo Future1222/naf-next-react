@@ -26,6 +26,7 @@ src
        |-- constances
        |-- repositories
        |-- utils
+   |-- stories
 .env.local
 ```
 
