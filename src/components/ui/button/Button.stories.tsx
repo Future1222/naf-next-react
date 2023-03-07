@@ -1,41 +1,60 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
 import { Button } from './Button'
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'DESIGN SYSTEM/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Button>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
-
-export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
+const Template: ComponentStory<typeof Button> = (args) => {
+  return <Button {...args} />
 }
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  label: 'Button',
+export const GAQ = Template.bind({})
+GAQ.args = {
+  label: 'GET A QUOTE',
+  color: true,
+  icon: true,
 }
 
-export const Large = Template.bind({})
-Large.args = {
-  size: 'large',
-  label: 'Button',
-}
+// export const OSV = Template.bind({})
+// OSV.args = {
+//   label: 'OUR SERVICES',
+//   color: false,
+//   icon: true,
+// }
 
-export const Small = Template.bind({})
-Small.args = {
-  size: 'small',
-  label: 'Button',
-}
+// export const VAS = Template.bind({})
+// VAS.args = {
+//   label: 'VIEW ALL SERVICES',
+//   color: false,
+// }
+
+// export const GIT = Template.bind({})
+// GIT.args = {
+//   label: 'GET IN TOUCH',
+//   color: true,
+// }
+
+// export const VAP = Template.bind({})
+// VAP.args = {
+//   label: 'VIEW ALL POST',
+//   color: false,
+//   icon: true,
+// }
+
+// export const CHOOSE = Template.bind({})
+// CHOOSE.args = {
+//   label: 'CHOOSE PLAN',
+//   color: true,
+//   icon: true,
+// }
+
+// export const SUBCRIBE = Template.bind({})
+// SUBCRIBE.args = {
+//   label: 'SUBCRIBE',
+//   color: false,
+//   icon: true,
+// }
