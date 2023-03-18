@@ -19,16 +19,21 @@ interface ButtonProps {
   className?: string
   icon?: boolean
   children?: ReactNode
+  backgroundColor?: string
   onClick?: () => void
 }
 
-export const Button = ({ size = 'lg', color, label, ...props }: ButtonProps) => {
+export const Button = ({ size = 'lg', color, label, backgroundColor, ...props }: ButtonProps) => {
   const chooseBackground = color ? 'storybook-button-bgwhite' : 'storybook-button-bgorange'
   return (
-    <Button className={[`storybook-button--${size}`, chooseBackground].join(' ')} {...props}>
+    <button
+      type="button"
+      className={[`storybook-button--${size}`, chooseBackground].join(' ')}
+      {...props}
+      style={{ backgroundColor }}
+    >
       {label}
-      {/* {icon && <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: 4 }} />} */}
-    </Button>
+    </button>
   )
 }
 
