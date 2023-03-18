@@ -1,48 +1,42 @@
-import React from 'react'
+// import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { ReactNode } from 'react'
 import './Button.css'
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean
-  /**
-   * What background color to use
-   */
+  variant?: 'text' | 'contained' | 'outlined'
+  size?: 'lg'
+  color?: boolean
+  label?:
+    | 'GET A QUOTE'
+    | 'OUR SERVICES'
+    | 'VIEW ALL SERVICES'
+    | 'GET IN TOUCH'
+    | 'VIEW ALL POST'
+    | 'CHOOSE PLAN'
+    | 'SUBCRIBE'
+  style?: string
+  className?: string
+  icon?: boolean
+  children?: ReactNode
   backgroundColor?: string
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large'
-  /**
-   * Button contents
-   */
-  label: string
-  /**
-   * Optional click handler
-   */
   onClick?: () => void
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
+export const Button = ({ size = 'lg', color, label, backgroundColor, ...props }: ButtonProps) => {
+  const chooseBackground = color ? 'storybook-button-bgwhite' : 'storybook-button-bgorange'
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={[`storybook-button--${size}`, chooseBackground].join(' ')}
       {...props}
+      style={{ backgroundColor }}
     >
       {label}
     </button>
   )
 }
+
+// https://github.com/Future1222/naf-next-react
+// https://preview.themeforest.net/item/driller-construction-real-estate-company-wordpress-theme/full_screen_preview/43058376?_ga=2.163776569.702562935.1675347803-2047627071.1675347803
+// https://bonnv79.github.io/react-bootstrap-storybook/?path=/story/components-form-form--form
