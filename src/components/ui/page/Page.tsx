@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Header } from '../header/Header'
-import './page.css'
+import './Page.css'
 
 type User = {
   name: string
